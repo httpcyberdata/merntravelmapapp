@@ -1,9 +1,16 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const chalk = require('chalk');
+const dotenv = require('dotenv');
 const app = express();
 
-mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true})
+dotenv.config();
+
+mongoose.connect(process.env.MONGO_URL , {useNewUrlParser: true})
+    .then(() => {
+        console.log(chalk.blue('MongoDB') + chalk.cyanBright.underline.bold(' Connected! 🌐 '))
+    })
 
 app.listen(8800, () => {
-    console.log('Backend server is operating 🖥️')
+    console.log(chalk.magentaBright('Backend server') + chalk.redBright(' is operating 🖥️'));
 })
