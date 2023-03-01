@@ -4,7 +4,7 @@ const chalk = require('chalk');
 const dotenv = require('dotenv');
 const app = express();
 const pinRoute = require('./routes/pins');
-
+const usersRoute = require('./routes/users');
 
 dotenv.config();
 
@@ -17,7 +17,7 @@ mongoose.connect(process.env.MONGO_URL , {useNewUrlParser: true})
     .catch((err) => console.log(err));
 
     app.use('/api/pins', pinRoute);
-    
+    app.use('/api/users', usersRoute);
 
 
 
