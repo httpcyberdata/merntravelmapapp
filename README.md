@@ -1,4 +1,5 @@
-# Project title
+# React Node Travel Map App (abandoned)
+Reason for abandonment: Couldn't create a Google Console Billing account due to suspicious activity.
 ![]
 Tutorial URL: https://www.youtube.com/watch?v=9oEQvI7K-rA&
 Tutorial description: React.js - Node.js Full-stack map pinning travel app using React hooks, Mapbox, Express, and MongoDB. How to create an app using Google Maps?
